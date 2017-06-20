@@ -24707,3 +24707,873 @@ ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attribut
   Rendered /usr/local/share/gems/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
   Rendered /usr/local/share/gems/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
   Rendered /usr/local/share/gems/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.1ms)
+DEPRECATION WARNING: config.active_record.whitelist_attributes is deprecated and have no effect. Remove its call from the configuration. (called from block in tsort_each at /usr/share/ruby/tsort.rb:228)
+DEPRECATION WARNING: config.active_record.whitelist_attributes is deprecated and have no effect. Remove its call from the configuration. (called from block in tsort_each at /usr/share/ruby/tsort.rb:228)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/share/ruby/webrick/httpserver.rb:140)
+
+
+Started GET "/" for 10.32.32.101 at 2017-05-30 13:17:16 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (15.5ms)
+  Rendered shared/_header.html.erb (2.2ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 3854ms (Views: 3853.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-ui/theme.self-830c3407ba1359ea36eee978235be14de5b78dacfa658a31226fe4f2b0faa7e7.css?body=1" for 10.32.32.101 at 2017-05-30 13:17:21 -0400
+
+
+Started GET "/assets/jquery-ui/keycode.self-ad63cd20acf49dd333bbbc537454d7d475bd610eb5b88de0dca009f0c3d314b1.js?body=1" for 10.32.32.101 at 2017-05-30 13:17:21 -0400
+
+
+Started GET "/assets/jquery-ui/version.self-c8e3d1203da26ea7efdf83c1eabb3f0ba55cb68e463f5ccf0d77bd15ce6a8e61.js?body=1" for 10.32.32.101 at 2017-05-30 13:17:21 -0400
+
+
+Started GET "/assets/application.self-4ddb8aa48b61a55a5546a6b1e0097f8cb3b254e034668168579d6b5188b03060.css?body=1" for 10.32.32.101 at 2017-05-30 13:17:21 -0400
+
+
+Started GET "/assets/errors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.32.32.101 at 2017-05-30 13:17:21 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker.self-3047420a03ae2233615bf455c1e7804ce8804db93879fcdcd757f73ce60ebec1.css?body=1" for 10.32.32.101 at 2017-05-30 13:17:21 -0400
+
+
+Started GET "/assets/jquery-ui/widgets/datepicker.self-2af0dec09da99d687c31fc224e940687a4eb3694e7b38b0871bba475cad86120.js?body=1" for 10.32.32.101 at 2017-05-30 13:17:21 -0400
+
+
+Started GET "/assets/errors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.32.32.101 at 2017-05-30 13:17:21 -0400
+
+
+Started GET "/assets/items.self-c52a0161da636fc5bfae8f33405d3f088d7785045f2f625700e2e90954736152.js?body=1" for 10.32.32.101 at 2017-05-30 13:17:21 -0400
+
+
+Started GET "/assets/application.self-3b8cb7dc988e4fa539847332cf632664e41a1c6d1d0e0239ffda7262a86f3b0a.js?body=1" for 10.32.32.101 at 2017-05-30 13:17:21 -0400
+
+
+Started GET "/items" for 10.32.32.101 at 2017-05-30 13:17:30 -0400
+Processing by ItemsController#index as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.32.32.101 at 2017-05-30 13:17:31 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (68.8ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 274ms (Views: 225.2ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/users/sign_in" for 10.32.32.101 at 2017-05-30 13:17:33 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TiCsoDRAvn5KGXBh6oofNia4cnbw8gYhfD9k82Ia/CGI203gwo+X9SBFI9ikmHlyxJeFCeLjZcGvFZN5flkSmg==", "user"=>{"email"=>"admin1@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "admin1@example.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-05-29 19:06:30.083013"], ["current_sign_in_at", "2017-05-30 17:17:33.580149"], ["current_sign_in_ip", "10.32.32.101"], ["sign_in_count", 7], ["updated_at", "2017-05-30 17:17:33.581615"], ["id", 1]]
+  [1m[35m (39.7ms)[0m  commit transaction
+Redirected to http://10.32.32.121/items
+Completed 302 Found in 365ms (ActiveRecord: 40.5ms)
+
+
+Started GET "/items" for 10.32.32.101 at 2017-05-30 13:17:33 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties"  ORDER BY "properties"."id" ASC LIMIT 1
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT  "items".* FROM "items" LIMIT 25 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1 OFFSET 0[0m
+  Rendered items/index.html.erb within layouts/application (47.0ms)
+  Rendered shared/_header.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 252ms (Views: 182.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/items/csv" for 10.32.32.101 at 2017-05-30 13:17:37 -0400
+Processing by ItemsController#csv as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered items/csv.html.erb within layouts/application (1.8ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 135ms (Views: 131.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/export.csv" for 10.32.32.101 at 2017-05-30 13:17:39 -0400
+
+ActionController::RoutingError (No route matches [GET] "/export.csv"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/share/ruby/webrick/httpserver.rb:140:in `service'
+  /usr/share/ruby/webrick/httpserver.rb:96:in `run'
+  /usr/share/ruby/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/share/gems/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/share/gems/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered /usr/local/share/gems/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.6ms)
+  Rendered /usr/local/share/gems/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /usr/local/share/gems/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (74.6ms)
+DEPRECATION WARNING: config.active_record.whitelist_attributes is deprecated and have no effect. Remove its call from the configuration. (called from block in tsort_each at /usr/share/ruby/tsort.rb:228)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/share/ruby/webrick/httpserver.rb:140)
+
+
+Started GET "/" for 10.32.32.101 at 2017-05-31 07:50:25 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.3ms)
+  Rendered shared/_header.html.erb (2.2ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 488ms (Views: 487.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for 10.32.32.101 at 2017-05-31 07:50:32 -0400
+Processing by ItemsController#index as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.32.32.101 at 2017-05-31 07:50:33 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (12.0ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 158ms (Views: 140.3ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/users/sign_in" for 10.32.32.101 at 2017-05-31 07:50:34 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+e/u9TyT68mHr90jG6/lMa2SkN7DRsFkopRORgj783jrYUdY2Fo2a+fJNJf+7sFkxrtnudCPDm4ewCpWSoMPpQ==", "user"=>{"email"=>"admin1@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "admin1@example.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-05-30 17:17:33.580149"], ["current_sign_in_at", "2017-05-31 11:50:34.911686"], ["last_sign_in_ip", "10.32.32.101"], ["sign_in_count", 8], ["updated_at", "2017-05-31 11:50:34.913337"], ["id", 1]]
+  [1m[35m (30.0ms)[0m  commit transaction
+Redirected to http://10.32.32.121/items
+Completed 302 Found in 198ms (ActiveRecord: 31.1ms)
+
+
+Started GET "/items" for 10.32.32.101 at 2017-05-31 07:50:35 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties"  ORDER BY "properties"."id" ASC LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" LIMIT 25 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1 OFFSET 0[0m
+  Rendered items/index.html.erb within layouts/application (46.6ms)
+  Rendered shared/_header.html.erb (0.9ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 219ms (Views: 184.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/items/csv" for 10.32.32.101 at 2017-05-31 07:50:38 -0400
+Processing by ItemsController#csv as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered items/csv.html.erb within layouts/application (2.0ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 148ms (Views: 143.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/items/import" for 10.32.32.101 at 2017-05-31 07:50:50 -0400
+Processing by ItemsController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hZ5xhBvGBwWfB2xxi3Ym8vj+nSCbUWtnT1qa96nmdog2VNjrrjVUmubjGAusx1fIKdyMCgnyT5BhqZXQ8vDUcQ==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f04542d7b98 @tempfile=#<Tempfile:/tmp/RackMultipart20170531-2436-5d23g5.csv>, @original_filename="testinv.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"testinv.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">, "commit"=>"Upload Items"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "items" ("device_name", "product_model_number", "serial_number", "quantity", "category", "property", "department", "warrenty_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["device_name", "ExampleTest"], ["product_model_number", "ExampleModel"], ["serial_number", "Ex1234"], ["quantity", 1], ["category", "Laptop"], ["property", "Radisson Plaza Hotel"], ["department", "IN STOCK"], ["warrenty_date", "2030-05-26"], ["created_at", "2017-05-31 11:50:50.476032"], ["updated_at", "2017-05-31 11:50:50.476032"]]
+  [1m[35m (18.9ms)[0m  commit transaction
+Redirected to http://10.32.32.121/items
+Completed 302 Found in 32ms (ActiveRecord: 20.2ms)
+
+
+Started GET "/items" for 10.32.32.101 at 2017-05-31 07:50:50 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.3ms)[0m  SELECT  "properties".* FROM "properties"  ORDER BY "properties"."id" ASC LIMIT 1
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT  "items".* FROM "items" LIMIT 25 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1 OFFSET 0[0m
+  Rendered items/index.html.erb within layouts/application (31.0ms)
+  Rendered shared/_header.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 167ms (Views: 160.5ms | ActiveRecord: 1.7ms)
+DEPRECATION WARNING: config.active_record.whitelist_attributes is deprecated and have no effect. Remove its call from the configuration. (called from block in tsort_each at /usr/share/ruby/tsort.rb:228)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/share/ruby/webrick/httpserver.rb:140)
+
+
+Started GET "/items/results?utf8=%E2%9C%93&search=example&commit=Search" for 10.32.32.101 at 2017-05-31 07:51:15 -0400
+Processing by ItemsController#results as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"example", "commit"=>"Search"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.9ms)[0m  SELECT "items".* FROM "items" WHERE (serial_number LIKE '%example%' OR device_name LIKE '%example%')  ORDER BY device_name DESC
+  Rendered items/results.html.erb within layouts/application (34.4ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 548ms (Views: 438.8ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/items/831" for 10.32.32.101 at 2017-05-31 07:51:21 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"831"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.3ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 831]]
+  Rendered items/show.html.erb within layouts/application (2.5ms)
+  Rendered shared/_header.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 225ms (Views: 198.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/items/831/edit" for 10.32.32.101 at 2017-05-31 07:51:23 -0400
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"831"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 831]]
+  [1m[36mProperty Load (0.2ms)[0m  [1mSELECT "properties".* FROM "properties"[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT "properties".* FROM "properties"  ORDER BY "properties"."name" ASC
+  [1m[36mDepartment Load (0.3ms)[0m  [1mSELECT "departments".* FROM "departments" WHERE "departments"."property_id" = ?[0m  [["property_id", 1]]
+  [1m[35mDepartment Load (0.2ms)[0m  SELECT "departments".* FROM "departments" WHERE "departments"."property_id" = ?  [["property_id", 2]]
+  [1m[36mDepartment Load (0.2ms)[0m  [1mSELECT "departments".* FROM "departments" WHERE "departments"."property_id" = ?[0m  [["property_id", 3]]
+  [1m[35mDepartment Load (0.1ms)[0m  SELECT "departments".* FROM "departments" WHERE "departments"."property_id" = ?  [["property_id", 4]]
+  Rendered items/_form.html.erb (515.9ms)
+  Rendered items/edit.html.erb within layouts/application (518.3ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 710ms (Views: 671.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/jquery-ui/ui-icons_444444_256x240-31d988765b4e6f56553c29588c500381dc3e6f0aa2980c8212202e5644aefd5d.png" for 10.32.32.101 at 2017-05-31 07:51:36 -0400
+
+
+Started GET "/items" for 10.32.32.101 at 2017-05-31 07:51:40 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.3ms)[0m  SELECT  "properties".* FROM "properties"  ORDER BY "properties"."id" ASC LIMIT 1
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items" LIMIT 25 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1 OFFSET 0[0m
+  Rendered items/index.html.erb within layouts/application (20.6ms)
+  Rendered shared/_header.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 99ms (Views: 94.2ms | ActiveRecord: 1.0ms)
+DEPRECATION WARNING: config.active_record.whitelist_attributes is deprecated and have no effect. Remove its call from the configuration. (called from block in tsort_each at /usr/share/ruby/tsort.rb:228)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/share/ruby/webrick/httpserver.rb:140)
+
+
+Started GET "/items/csv" for 10.32.32.101 at 2017-05-31 07:57:45 -0400
+Processing by ItemsController#csv as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered items/csv.html.erb within layouts/application (5.1ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 434ms (Views: 346.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/items/results?utf8=%E2%9C%93&search=example&commit=Search" for 10.32.32.101 at 2017-05-31 07:58:00 -0400
+Processing by ItemsController#results as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"example", "commit"=>"Search"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mItem Load (0.9ms)[0m  [1mSELECT "items".* FROM "items" WHERE (serial_number LIKE '%example%' OR device_name LIKE '%example%')  ORDER BY device_name DESC[0m
+  Rendered items/results.html.erb within layouts/application (61.7ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 222ms (Views: 208.4ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/items/831" for 10.32.32.101 at 2017-05-31 07:58:04 -0400
+Processing by ItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WasutIw4l2ymcS5UTZV2l90XR+ibgbsrlWMLxlXcM9DqYYfbOcvE89+VWi5qJAetDDVWwgkin9y7kAThDsqRKQ==", "id"=>"831"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 831]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 831]]
+  [1m[35m (18.8ms)[0m  commit transaction
+Redirected to http://10.32.32.121/items
+Completed 302 Found in 31ms (ActiveRecord: 19.7ms)
+
+
+Started GET "/items" for 10.32.32.101 at 2017-05-31 07:58:05 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties"  ORDER BY "properties"."id" ASC LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" LIMIT 25 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1 OFFSET 0[0m
+  Rendered items/index.html.erb within layouts/application (420.7ms)
+  Rendered shared/_header.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 542ms (Views: 492.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/items/csv" for 10.32.32.101 at 2017-05-31 07:58:06 -0400
+Processing by ItemsController#csv as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered items/csv.html.erb within layouts/application (0.8ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 142ms (Views: 138.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/items/import" for 10.32.32.101 at 2017-05-31 07:58:07 -0400
+Processing by ItemsController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HVHi0vHRcDpFBt2EKEsgV1AIdWiZn8Z1uMysF1ujfKyum0u9RCIjpTziqf4P+lFtgSpkQgs84oKWP6MwALXeVQ==", "commit"=>"Upload Items"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `path' for nil:NilClass):
+  app/models/item.rb:8:in `import'
+  app/controllers/items_controller.rb:119:in `import'
+
+
+  Rendered /usr/local/share/gems/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /usr/local/share/gems/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /usr/local/share/gems/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/share/gems/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.9ms)
+
+
+Started POST "/items/import" for 10.32.32.101 at 2017-05-31 07:58:36 -0400
+Processing by ItemsController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HVHi0vHRcDpFBt2EKEsgV1AIdWiZn8Z1uMysF1ujfKyum0u9RCIjpTziqf4P+lFtgSpkQgs84oKWP6MwALXeVQ==", "file"=>#<ActionDispatch::Http::UploadedFile:0x0056107918c330 @tempfile=#<Tempfile:/tmp/RackMultipart20170531-2567-gcp3l9.csv>, @original_filename="exampleCSV.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"exampleCSV.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">, "commit"=>"Upload Items"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "items" ("device_name", "product_model_number", "serial_number", "quantity", "category", "property", "department", "warrenty_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["device_name", "ExampleTest"], ["product_model_number", "ExampleModel"], ["serial_number", "Ex1234"], ["quantity", 1], ["category", "Laptop"], ["property", "Radisson Plaza Hotel"], ["department", "IN STOCK"], ["warrenty_date", "2030-05-26"], ["created_at", "2017-05-31 11:58:36.779495"], ["updated_at", "2017-05-31 11:58:36.779495"]]
+  [1m[36m (16.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://10.32.32.121/items
+Completed 302 Found in 35ms (ActiveRecord: 17.1ms)
+
+
+Started GET "/items" for 10.32.32.101 at 2017-05-31 07:58:36 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProperty Load (0.3ms)[0m  [1mSELECT  "properties".* FROM "properties"  ORDER BY "properties"."id" ASC LIMIT 1[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT  "items".* FROM "items" LIMIT 25 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1 OFFSET 0
+  Rendered items/index.html.erb within layouts/application (28.1ms)
+  Rendered shared/_header.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 158ms (Views: 151.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/items" for 10.32.32.101 at 2017-05-31 07:59:28 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.3ms)[0m  SELECT  "properties".* FROM "properties"  ORDER BY "properties"."id" ASC LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" LIMIT 25 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1 OFFSET 0[0m
+  Rendered items/index.html.erb within layouts/application (48.2ms)
+  Rendered shared/_header.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 198ms (Views: 190.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/items/new" for 10.32.32.101 at 2017-05-31 07:59:36 -0400
+Processing by ItemsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT "properties".* FROM "properties"[0m
+  [1m[35mProperty Load (0.4ms)[0m  SELECT "properties".* FROM "properties"  ORDER BY "properties"."name" ASC
+  [1m[36mDepartment Load (0.4ms)[0m  [1mSELECT "departments".* FROM "departments" WHERE "departments"."property_id" = ?[0m  [["property_id", 1]]
+  [1m[35mDepartment Load (0.7ms)[0m  SELECT "departments".* FROM "departments" WHERE "departments"."property_id" = ?  [["property_id", 2]]
+  [1m[36mDepartment Load (0.2ms)[0m  [1mSELECT "departments".* FROM "departments" WHERE "departments"."property_id" = ?[0m  [["property_id", 3]]
+  [1m[35mDepartment Load (0.1ms)[0m  SELECT "departments".* FROM "departments" WHERE "departments"."property_id" = ?  [["property_id", 4]]
+  Rendered items/_form.html.erb (77.7ms)
+  Rendered items/new.html.erb within layouts/application (80.3ms)
+  Rendered shared/_header.html.erb (0.9ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 305ms (Views: 298.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/items" for 10.32.32.101 at 2017-05-31 08:00:52 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.6ms)[0m  SELECT  "properties".* FROM "properties"  ORDER BY "properties"."id" ASC LIMIT 1
+  [1m[36mItem Load (0.7ms)[0m  [1mSELECT  "items".* FROM "items" LIMIT 25 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1 OFFSET 0[0m
+  Rendered items/index.html.erb within layouts/application (31.9ms)
+  Rendered shared/_header.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 189ms (Views: 180.0ms | ActiveRecord: 2.6ms)
+DEPRECATION WARNING: config.active_record.whitelist_attributes is deprecated and have no effect. Remove its call from the configuration. (called from block in tsort_each at /usr/share/ruby/tsort.rb:228)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/share/ruby/webrick/httpserver.rb:140)
+
+
+Started GET "/" for 10.32.41.121 at 2017-06-08 16:02:46 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.7ms)
+  Rendered shared/_header.html.erb (2.3ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 634ms (Views: 633.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-ui/version.self-c8e3d1203da26ea7efdf83c1eabb3f0ba55cb68e463f5ccf0d77bd15ce6a8e61.js?body=1" for 10.32.41.121 at 2017-06-08 16:02:51 -0400
+
+
+Started GET "/assets/jquery-ui/keycode.self-ad63cd20acf49dd333bbbc537454d7d475bd610eb5b88de0dca009f0c3d314b1.js?body=1" for 10.32.41.121 at 2017-06-08 16:02:51 -0400
+
+
+Started GET "/assets/items.self-c52a0161da636fc5bfae8f33405d3f088d7785045f2f625700e2e90954736152.js?body=1" for 10.32.41.121 at 2017-06-08 16:02:51 -0400
+
+
+Started GET "/assets/errors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.32.41.121 at 2017-06-08 16:02:51 -0400
+
+
+Started GET "/assets/application.self-3b8cb7dc988e4fa539847332cf632664e41a1c6d1d0e0239ffda7262a86f3b0a.js?body=1" for 10.32.41.121 at 2017-06-08 16:02:51 -0400
+
+
+Started GET "/assets/jquery-ui/widgets/datepicker.self-2af0dec09da99d687c31fc224e940687a4eb3694e7b38b0871bba475cad86120.js?body=1" for 10.32.41.121 at 2017-06-08 16:02:51 -0400
+
+
+Started GET "/items" for 10.32.41.121 at 2017-06-08 16:04:33 -0400
+Processing by ItemsController#index as HTML
+Completed 401 Unauthorized in 11ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.32.41.121 at 2017-06-08 16:04:33 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (24.2ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 194ms (Views: 162.6ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/users/sign_in" for 10.32.41.121 at 2017-06-08 16:04:35 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QyZ5cW1ef+FlWEPwjW9QPa2DwaedUhC00ORiK3M4/tNAQyhnp/UXnxyaj5Tk4iP9rR7nO2/HCay1cxf8WRZKFQ==", "user"=>{"email"=>"admin1@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "admin1@example.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.1ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-05-31 11:50:34.911686"], ["current_sign_in_at", "2017-06-08 20:04:35.981610"], ["current_sign_in_ip", "10.32.41.121"], ["sign_in_count", 9], ["updated_at", "2017-06-08 20:04:35.983071"], ["id", 1]]
+  [1m[35m (79.3ms)[0m  commit transaction
+Redirected to http://10.32.32.121/items
+Completed 302 Found in 307ms (ActiveRecord: 82.1ms)
+
+
+Started GET "/items" for 10.32.41.121 at 2017-06-08 16:04:36 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties"  ORDER BY "properties"."id" ASC LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" LIMIT 25 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1 OFFSET 0[0m
+  Rendered items/index.html.erb within layouts/application (45.5ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 204ms (Views: 169.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/fontawesome-webfont-7dacf83f51179de8d7980a513e67ab3a08f2c6272bb5946df8fd77c0d1763b73.woff2?v=4.6.3" for 10.32.41.121 at 2017-06-08 16:04:36 -0400
+DEPRECATION WARNING: config.active_record.whitelist_attributes is deprecated and have no effect. Remove its call from the configuration. (called from block in tsort_each at /usr/share/ruby/tsort.rb:228)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/share/ruby/webrick/httpserver.rb:140)
+
+
+Started GET "/" for 10.32.32.108 at 2017-06-20 14:05:29 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.7ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 405ms (Views: 404.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-ui/theme.self-830c3407ba1359ea36eee978235be14de5b78dacfa658a31226fe4f2b0faa7e7.css?body=1" for 10.32.32.108 at 2017-06-20 14:05:33 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 10.32.32.108 at 2017-06-20 14:05:33 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker.self-3047420a03ae2233615bf455c1e7804ce8804db93879fcdcd757f73ce60ebec1.css?body=1" for 10.32.32.108 at 2017-06-20 14:05:33 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.self-08cc29a081df6c61eca113f344068be67f82c693587189daf0b0c9a7d1ad0cda.css?body=1" for 10.32.32.108 at 2017-06-20 14:05:33 -0400
+
+
+Started GET "/assets/application.self-4ddb8aa48b61a55a5546a6b1e0097f8cb3b254e034668168579d6b5188b03060.css?body=1" for 10.32.32.108 at 2017-06-20 14:05:33 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 10.32.32.108 at 2017-06-20 14:05:33 -0400
+
+
+Started GET "/assets/errors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.32.32.108 at 2017-06-20 14:05:33 -0400
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.32.32.108 at 2017-06-20 14:05:33 -0400
+
+
+Started GET "/assets/jasny-bootstrap.self-40d7c2d19aaaa823730d7a25f55b205f76dbf676a49617cb790aa130f43725b9.css?body=1" for 10.32.32.108 at 2017-06-20 14:05:33 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.32.32.108 at 2017-06-20 14:05:33 -0400
+
+
+Started GET "/assets/font-awesome.self-0235e3acee178ed76f87646421668eff5c89ed9bf980c2473f93301835c780af.css?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/jquery-ui/version.self-c8e3d1203da26ea7efdf83c1eabb3f0ba55cb68e463f5ccf0d77bd15ce6a8e61.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/jquery-ui/keycode.self-ad63cd20acf49dd333bbbc537454d7d475bd610eb5b88de0dca009f0c3d314b1.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/jquery-ui/widgets/datepicker.self-2af0dec09da99d687c31fc224e940687a4eb3694e7b38b0871bba475cad86120.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/bootstrap.self-ff76904e4e6f362fe0bf1138e5a35caea2fb89500029971c584ce7810c01ea1d.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/errors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/jasny-bootstrap.self-dbc595c7c1beb59c42b14f9b556f3d3e67805dbbde5a3b6ea5d6bbf5e6edb764.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/items.self-c52a0161da636fc5bfae8f33405d3f088d7785045f2f625700e2e90954736152.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/assets/application.self-3b8cb7dc988e4fa539847332cf632664e41a1c6d1d0e0239ffda7262a86f3b0a.js?body=1" for 10.32.32.108 at 2017-06-20 14:05:34 -0400
+
+
+Started GET "/items" for 10.32.32.108 at 2017-06-20 14:05:37 -0400
+Processing by ItemsController#index as HTML
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.32.32.108 at 2017-06-20 14:05:38 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (24.5ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 189ms (Views: 157.6ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/users/sign_in" for 10.32.32.108 at 2017-06-20 14:06:03 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E9dzoCS8dhamg/pNR7EdBfXm6aSMB8QdX714xP7AKAxYmBPMQ3laF2NhH1KuI1GVnS9ucuzhmHYatl9XstdEtw==", "user"=>{"email"=>"admin1@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "admin1@example.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-06-08 20:04:35.981610"], ["current_sign_in_at", "2017-06-20 18:06:04.078644"], ["last_sign_in_ip", "10.32.41.121"], ["current_sign_in_ip", "10.32.32.108"], ["sign_in_count", 10], ["updated_at", "2017-06-20 18:06:04.080231"], ["id", 1]]
+  [1m[35m (42.2ms)[0m  commit transaction
+Redirected to http://10.32.32.121/items
+Completed 302 Found in 256ms (ActiveRecord: 43.4ms)
+
+
+Started GET "/items" for 10.32.32.108 at 2017-06-20 14:06:04 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties"  ORDER BY "properties"."id" ASC LIMIT 1
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT  "items".* FROM "items" LIMIT 25 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1 OFFSET 0[0m
+  Rendered items/index.html.erb within layouts/application (56.6ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 245ms (Views: 205.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/fontawesome-webfont-7dacf83f51179de8d7980a513e67ab3a08f2c6272bb5946df8fd77c0d1763b73.woff2?v=4.6.3" for 10.32.32.108 at 2017-06-20 14:06:04 -0400
+DEPRECATION WARNING: config.active_record.whitelist_attributes is deprecated and have no effect. Remove its call from the configuration. (called from block in tsort_each at /usr/share/ruby/tsort.rb:228)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/share/ruby/webrick/httpserver.rb:140)
+
+
+Started GET "/" for 10.32.32.108 at 2017-06-20 14:08:27 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_header.html.erb (30.1ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 414ms (Views: 409.9ms | ActiveRecord: 3.6ms)
+DEPRECATION WARNING: config.active_record.whitelist_attributes is deprecated and have no effect. Remove its call from the configuration. (called from block in tsort_each at /usr/share/ruby/tsort.rb:228)
+  [1m[36m (24.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (31.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateItems (20130523194813)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /git/TIMBS/db/migrate/20130523194813_create_items.rb:15)
+  [1m[35m (0.6ms)[0m  CREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "device_name" text, "serial_number" varchar, "description" text, "product_model_number" text, "quantity" integer, "picture" varchar, "category" text, "property" varchar, "department" varchar, "warrenty_date" date, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130523194813"]]
+  [1m[35m (33.6ms)[0m  commit transaction
+Migrating to DeviseCreateUsers (20130524132945)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /git/TIMBS/db/migrate/20130524132945_devise_create_users.rb:37)
+  [1m[35m (0.7ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar NOT NULL, "encrypted_password" varchar NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.6ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130524132945"]]
+  [1m[36m (33.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddRoleToUsers (20140412010617)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "users" ADD "role" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140412010617"]]
+  [1m[36m (25.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProperties (20170516154347)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "properties" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170516154347"]]
+  [1m[36m (33.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateDepartments (20170516154424)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "property_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  CREATE  INDEX "index_departments_on_property_id" ON "departments" ("property_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170516154424"]]
+  [1m[35m (33.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_departments_on_property_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_departments_on_property_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.8ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+DEPRECATION WARNING: config.active_record.whitelist_attributes is deprecated and have no effect. Remove its call from the configuration. (called from block in tsort_each at /usr/share/ruby/tsort.rb:228)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/share/ruby/webrick/httpserver.rb:140)
+
+
+Started GET "/" for 10.32.32.108 at 2017-06-20 14:11:00 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_header.html.erb (28.9ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 459ms (Views: 455.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/items" for 10.32.32.108 at 2017-06-20 14:11:05 -0400
+Processing by ItemsController#index as HTML
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.32.32.108 at 2017-06-20 14:11:06 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (26.5ms)
+  Rendered shared/_header.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 174ms (Views: 150.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.32.32.108 at 2017-06-20 14:11:07 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pTyMDTDAsH77mD5RoPDwrJxMEhxz/HoZVCbp4W+/d8RXGNU9xGuN8yqbK8vzL9yyw68SjX49ruqNgAFfjwRKTg==", "user"=>{"email"=>"admin1@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "admin1@example.com"]]
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.5ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pTyMDTDAsH77mD5RoPDwrJxMEhxz/HoZVCbp4W+/d8RXGNU9xGuN8yqbK8vzL9yyw68SjX49ruqNgAFfjwRKTg==", "user"=>{"email"=>"admin1@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  Rendered devise/sessions/new.html.erb within layouts/application (4.4ms)
+  Rendered shared/_header.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 288ms (Views: 94.1ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: config.active_record.whitelist_attributes is deprecated and have no effect. Remove its call from the configuration. (called from block in tsort_each at /usr/share/ruby/tsort.rb:228)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin1@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "admin1@example.com"], ["encrypted_password", "$2a$10$oTfnDtLT0l5BF9FPMnCtXuOvfZCYer16.agXYsBefiz3hZeH8fMIO"], ["sign_in_count", 4], ["current_sign_in_at", "2014-12-30 23:41:54.000000"], ["last_sign_in_at", "2014-12-30 23:40:40.000000"], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["role", 2], ["created_at", "2017-06-20 18:11:29.165964"], ["updated_at", "2017-06-20 18:11:29.165964"]]
+  [1m[36m (26.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'user1@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "user1@example.com"], ["encrypted_password", "$2a$10$ldaX74VUwFC3sZM2ZALyfO8bEhDxMLVrSwYSLveMnCNZuCs1zux8C"], ["sign_in_count", 1], ["current_sign_in_at", "2014-03-10 11:28:22.000000"], ["last_sign_in_at", "2014-03-10 11:28:22.000000"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["role", 0], ["created_at", "2017-06-20 18:11:29.302766"], ["updated_at", "2017-06-20 18:11:29.302766"]]
+  [1m[36m (31.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "items" ("device_name", "serial_number", "description", "product_model_number", "quantity", "category", "property", "department", "warrenty_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["device_name", "Arduino Uno"], ["serial_number", "1W321J"], ["description", "The Arduino Uno is a microcontroller board based on the ATmega328. It has 14 digital input/output pins (of which 6 can be used as PWM outputs), 6 analog inputs, a 16 MHz ceramic resonator, a USB connection, a power jack, an ICSP header, and a reset button. \r\n\r\nRevision 3 of the board has the following new features:\r\n* 1.0 pinout: added SDA and SCL pins that are near to the AREF pin and two other new pins placed near to the RESET pin, the IOREF that allow the shields to adapt to the voltage provided from the board. In future, shields will be compatible with both the board that uses the AVR, which operates with 5V and with the Arduino Due that operates with 3.3V. The second one is a not connected pin, that is reserved for future purposes.\r\n* Stronger RESET circuit.\r\n* Atmega 16U2 replace the 8U2."], ["product_model_number", "R3"], ["quantity", 1], ["category", "Laptop"], ["property", "Radisson"], ["department", "IN STOCK"], ["warrenty_date", "2013-05-05"], ["created_at", "2017-06-20 18:11:29.385782"], ["updated_at", "2017-06-20 18:11:29.385782"]]
+  [1m[35m (25.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("device_name", "serial_number", "description", "product_model_number", "quantity", "category", "property", "department", "warrenty_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["device_name", "Arduino Mega 2560"], ["serial_number", "2JKL80085"], ["description", "The Arduino Mega 2560 is a microcontroller board based on the ATmega2560. It has 54 digital input/output pins (of which 14 can be used as PWM outputs), 16 analog inputs, 4 UARTs (hardware serial ports), a 16 MHz crystal oscillator, a USB connection, a power jack, an ICSP header, and a reset button. It contains everything needed to support the microcontroller; simply connect it to a computer with a USB cable or power it with a AC-to-DC adapter or battery to get started. The Mega is compatible with most shields designed for the Arduino Duemilanove or Diecimila."], ["product_model_number", "R3"], ["quantity", 1], ["category", "Desktop"], ["property", "Wings Event Center"], ["department", "Technology Services"], ["warrenty_date", "2012-05-05"], ["created_at", "2017-06-20 18:11:29.419181"], ["updated_at", "2017-06-20 18:11:29.419181"]]
+  [1m[36m (25.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "properties" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Choose a Property"], ["created_at", "2017-06-20 18:11:29.472790"], ["updated_at", "2017-06-20 18:11:29.472790"]]
+  [1m[35m (25.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "properties" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Radisson Plaza Hotel"], ["created_at", "2017-06-20 18:11:29.504947"], ["updated_at", "2017-06-20 18:11:29.504947"]]
+  [1m[36m (25.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.3ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "properties" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Wings Event Center"], ["created_at", "2017-06-20 18:11:29.537687"], ["updated_at", "2017-06-20 18:11:29.537687"]]
+  [1m[35m (34.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "properties" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Wings West"], ["created_at", "2017-06-20 18:11:29.577573"], ["updated_at", "2017-06-20 18:11:29.577573"]]
+  [1m[36m (26.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.4ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "IN STOCK"], ["property_id", 2], ["created_at", "2017-06-20 18:11:29.652534"], ["updated_at", "2017-06-20 18:11:29.652534"]]
+  [1m[36m (41.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Technology Services"], ["property_id", 2], ["created_at", "2017-06-20 18:11:29.701412"], ["updated_at", "2017-06-20 18:11:29.701412"]]
+  [1m[36m (59.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Front Office"], ["property_id", 2], ["created_at", "2017-06-20 18:11:29.765833"], ["updated_at", "2017-06-20 18:11:29.765833"]]
+  [1m[36m (65.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "RAD Burdicks"], ["property_id", 2], ["created_at", "2017-06-20 18:11:29.837549"], ["updated_at", "2017-06-20 18:11:29.837549"]]
+  [1m[36m (58.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Finance"], ["property_id", 2], ["created_at", "2017-06-20 18:11:29.901082"], ["updated_at", "2017-06-20 18:11:29.901082"]]
+  [1m[36m (58.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Human Resources"], ["property_id", 2], ["created_at", "2017-06-20 18:11:29.965504"], ["updated_at", "2017-06-20 18:11:29.965504"]]
+  [1m[36m (73.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Sydney"], ["property_id", 2], ["created_at", "2017-06-20 18:11:30.045368"], ["updated_at", "2017-06-20 18:11:30.045368"]]
+  [1m[36m (54.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "RIO"], ["property_id", 2], ["created_at", "2017-06-20 18:11:30.123406"], ["updated_at", "2017-06-20 18:11:30.123406"]]
+  [1m[36m (46.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Sales and Catering"], ["property_id", 2], ["created_at", "2017-06-20 18:11:30.175257"], ["updated_at", "2017-06-20 18:11:30.175257"]]
+  [1m[36m (53.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.1ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Executive Office"], ["property_id", 2], ["created_at", "2017-06-20 18:11:30.231664"], ["updated_at", "2017-06-20 18:11:30.231664"]]
+  [1m[36m (59.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.1ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "SLP"], ["property_id", 2], ["created_at", "2017-06-20 18:11:30.296970"], ["updated_at", "2017-06-20 18:11:30.296970"]]
+  [1m[36m (42.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Banquets"], ["property_id", 2], ["created_at", "2017-06-20 18:11:30.344368"], ["updated_at", "2017-06-20 18:11:30.344368"]]
+  [1m[36m (50.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Housekeeping"], ["property_id", 2], ["created_at", "2017-06-20 18:11:30.399838"], ["updated_at", "2017-06-20 18:11:30.399838"]]
+  [1m[36m (44.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Zazios"], ["property_id", 2], ["created_at", "2017-06-20 18:11:30.448934"], ["updated_at", "2017-06-20 18:11:30.448934"]]
+  [1m[36m (39.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Marketing"], ["property_id", 2], ["created_at", "2017-06-20 18:11:30.493444"], ["updated_at", "2017-06-20 18:11:30.493444"]]
+  [1m[36m (43.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Blush"], ["property_id", 2], ["created_at", "2017-06-20 18:11:30.541222"], ["updated_at", "2017-06-20 18:11:30.541222"]]
+  [1m[36m (41.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Burdicks For Breakfast"], ["property_id", 2], ["created_at", "2017-06-20 18:11:30.587151"], ["updated_at", "2017-06-20 18:11:30.587151"]]
+  [1m[36m (27.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.3ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "KAC"], ["property_id", 2], ["created_at", "2017-06-20 18:11:30.619736"], ["updated_at", "2017-06-20 18:11:30.619736"]]
+  [1m[36m (43.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Engineering"], ["property_id", 2], ["created_at", "2017-06-20 18:11:30.668260"], ["updated_at", "2017-06-20 18:11:30.668260"]]
+  [1m[36m (51.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Wedding Studio"], ["property_id", 2], ["created_at", "2017-06-20 18:11:30.725681"], ["updated_at", "2017-06-20 18:11:30.725681"]]
+  [1m[36m (64.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.5ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Radisson Plaza Hotel"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Websters"], ["property_id", 2], ["created_at", "2017-06-20 18:11:30.797257"], ["updated_at", "2017-06-20 18:11:30.797257"]]
+  [1m[36m (50.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Wings Event Center"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Building Svcs"], ["property_id", 3], ["created_at", "2017-06-20 18:11:30.852204"], ["updated_at", "2017-06-20 18:11:30.852204"]]
+  [1m[36m (51.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.1ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Wings Event Center"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "WEC Finance"], ["property_id", 3], ["created_at", "2017-06-20 18:11:30.907455"], ["updated_at", "2017-06-20 18:11:30.907455"]]
+  [1m[36m (60.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Wings Event Center"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "WEC Ice Events"], ["property_id", 3], ["created_at", "2017-06-20 18:11:30.971790"], ["updated_at", "2017-06-20 18:11:30.971790"]]
+  [1m[36m (35.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.3ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Wings Event Center"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "WEC Hockey Club"], ["property_id", 3], ["created_at", "2017-06-20 18:11:31.011737"], ["updated_at", "2017-06-20 18:11:31.011737"]]
+  [1m[36m (75.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."name" = ? LIMIT 1  [["name", "Wings West"]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "WW Burdicks"], ["property_id", 4], ["created_at", "2017-06-20 18:11:31.092829"], ["updated_at", "2017-06-20 18:11:31.092829"]]
+  [1m[36m (67.2ms)[0m  [1mcommit transaction[0m
