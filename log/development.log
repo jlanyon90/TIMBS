@@ -25577,3 +25577,150 @@ DEPRECATION WARNING: config.active_record.whitelist_attributes is deprecated and
   [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.4ms)[0m  INSERT INTO "departments" ("name", "property_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "WW Burdicks"], ["property_id", 4], ["created_at", "2017-06-20 18:11:31.092829"], ["updated_at", "2017-06-20 18:11:31.092829"]]
   [1m[36m (67.2ms)[0m  [1mcommit transaction[0m
+DEPRECATION WARNING: config.active_record.whitelist_attributes is deprecated and have no effect. Remove its call from the configuration. (called from block in tsort_each at /usr/share/ruby/tsort.rb:228)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/share/ruby/webrick/httpserver.rb:140)
+
+
+Started GET "/" for 10.32.32.108 at 2017-06-20 14:49:01 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.2ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 1902ms (Views: 1901.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for 10.32.32.108 at 2017-06-20 14:49:40 -0400
+Processing by ItemsController#index as HTML
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.32.32.108 at 2017-06-20 14:49:41 -0400
+Processing by Devise::SessionsController#new as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 2.4ms)
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+  activerecord (4.2.6) lib/active_record/connection_adapters/sqlite3_adapter.rb:513:in `table_structure'
+  activerecord (4.2.6) lib/active_record/connection_adapters/sqlite3_adapter.rb:387:in `columns'
+  activerecord (4.2.6) lib/active_record/connection_adapters/schema_cache.rb:43:in `columns'
+  activerecord (4.2.6) lib/active_record/attributes.rb:93:in `columns'
+  activerecord (4.2.6) lib/active_record/attributes.rb:98:in `columns_hash'
+  activerecord (4.2.6) lib/active_record/model_schema.rb:238:in `column_types'
+  activerecord (4.2.6) lib/active_record/model_schema.rb:234:in `attributes_builder'
+  activerecord (4.2.6) lib/active_record/model_schema.rb:254:in `_default_attributes'
+  activerecord (4.2.6) lib/active_record/core.rb:273:in `initialize'
+  activerecord (4.2.6) lib/active_record/inheritance.rb:61:in `new'
+  activerecord (4.2.6) lib/active_record/inheritance.rb:61:in `new'
+  devise (4.1.1) app/controllers/devise/sessions_controller.rb:9:in `new'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/share/ruby/webrick/httpserver.rb:140:in `service'
+  /usr/share/ruby/webrick/httpserver.rb:96:in `run'
+  /usr/share/ruby/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/share/gems/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /usr/local/share/gems/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/share/gems/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/share/gems/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.8ms)
+DEPRECATION WARNING: config.active_record.whitelist_attributes is deprecated and have no effect. Remove its call from the configuration. (called from block in tsort_each at /usr/share/ruby/tsort.rb:228)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /usr/share/ruby/webrick/httpserver.rb:140)
+
+
+Started GET "/users/sign_in" for 10.32.32.108 at 2017-06-20 14:51:18 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (417.1ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 892ms (Views: 839.0ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/users/sign_in" for 10.32.32.108 at 2017-06-20 14:51:21 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q0kUQ90wNf/ssOS5XfeeeoIfC4DCi91X9RkIvJVZJC9ZbU1zKZsIcj2z8SMOKLJk3fwLEc9KCaQsv+ACdeIZpQ==", "user"=>{"email"=>"admin1@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "admin1@example.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2014-12-30 23:41:54.000000"], ["current_sign_in_at", "2017-06-20 18:51:21.469641"], ["current_sign_in_ip", "10.32.32.108"], ["sign_in_count", 5], ["updated_at", "2017-06-20 18:51:21.471429"], ["id", 1]]
+  [1m[35m (16.3ms)[0m  commit transaction
+Redirected to http://10.32.32.121/items
+Completed 302 Found in 255ms (ActiveRecord: 17.3ms)
+
+
+Started GET "/items" for 10.32.32.108 at 2017-06-20 14:51:21 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProperty Load (0.2ms)[0m  SELECT  "properties".* FROM "properties"  ORDER BY "properties"."id" ASC LIMIT 1
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items" LIMIT 25 OFFSET 0[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1 OFFSET 0
+  Rendered items/index.html.erb within layouts/application (26.4ms)
+  Rendered shared/_header.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 176ms (Views: 125.6ms | ActiveRecord: 2.1ms)
