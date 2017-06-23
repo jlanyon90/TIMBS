@@ -11,6 +11,7 @@ gem 'mini_magick'
 gem 'protected_attributes'
 gem 'pundit'
 gem 'rails'
+gem 'net-ldap'
 gem "seed_dump"
 gem 'twitter-bootstrap-rails'
 gem 'will_paginate', '~> 3.0'
