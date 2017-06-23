@@ -34,15 +34,17 @@ If you want to run unit tests you can do so by running the following command:
 
 ### ToDo
 
-* Allow for way to mass add similair models
+* Allow for way to mass add similair models outside of CSV
 
 * Improve documentation & formatting of all files
 
-* Link to AD
-
-* Create Reports and alerting on warrenty date
+* Create web reports
 
 ### Finished TODO
+
+* Link to AD
+
+* Create Reporting on warrenty dates (currently through cron task)
 
 * Add Importing CSV option
 
