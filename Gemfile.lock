@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/cschiewek/devise_ldap_authenticatable.git
+  revision: 9f7699d913f715afd4f2a99b80733eda52b1d88a
+  specs:
+    devise_ldap_authenticatable (0.8.6)
+      devise (>= 3.4.1)
+      net-ldap (>= 0.6, != 0.12)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -275,6 +283,7 @@ DEPENDENCIES
   coveralls
   database_cleaner
   devise
+  devise_ldap_authenticatable!
   factory_girl_rails
   faker
   font-awesome-rails

@@ -5,5 +5,5 @@ echo -----------------Inventory Past Warranty Date \(Hostname\|Serial Number\|Wa
 cat /git/TIMBS/db/query.sql|sqlite3 /git/TIMBS/db/development.sqlite3 >> /git/TIMBS/db/results
 echo --------------------------------------------------------- >>/git/TIMBS/db/results
 a=`date`
-echo The items attached have exceeded their warranty date according to our records. Please investigate further and replace where needed. | mail -a "/git/TIMBS/db/results" -s "Inventory Past Warranty Date: $a" jlanyon99@gmail.com
+echo The items attached have exceeded their warranty date according to our records. Please investigate further and replace where needed. | mail -a "/git/TIMBS/db/results" -s "Inventory Past Warranty Date: $a" jlanyon@ghgkz.com
 

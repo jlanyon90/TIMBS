@@ -5,6 +5,7 @@ gem 'cancan'
 gem 'carrierwave'
 gem 'coveralls'
 gem 'devise'
+gem "devise_ldap_authenticatable", :git => "git://github.com/cschiewek/devise_ldap_authenticatable.git"
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'mini_magick'
